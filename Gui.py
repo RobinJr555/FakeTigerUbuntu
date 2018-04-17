@@ -46,7 +46,6 @@ class TrayIcon(QSystemTrayIcon):
         self.setIcon(QIcon("./document/bitbug_favicon.ico"))
         self.icon           = self.MessageIcon()
     def Mshowmassage(self, title ,string):
-        # the timehint argument must be 1 , there are some error in this funciton waitting to tackle
         self.showMessage(title,string,self.icon,1)
 
 class window(QWidget):
