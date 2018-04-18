@@ -15,7 +15,7 @@ import sys
 import os
 # from Module import * get all the 'public' object of Module
 from PyQt5.QtWidgets import *               #Widgets: the primary elements for creating user interfaces in Qt.
-from PyQt5.QtCore import *              
+from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
 #QsystemTrayIcon 
@@ -29,7 +29,6 @@ class TrayIcon(QSystemTrayIcon):
         self.menu           = QMenu()
         # add the exit action
         self.quitAction     = QAction("exit",self,triggered = self.quit)
-         
         self.menu.addAction(self.quitAction)
 
         self.setContextMenu(self.menu)
@@ -39,7 +38,6 @@ class TrayIcon(QSystemTrayIcon):
         self.parent().close()
         qApp.quit()
         sys.exit()
-    
     def seticon(self):
         # the format of setIcon() must be .ico 
         # !!!: .png file can't be read
